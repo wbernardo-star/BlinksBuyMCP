@@ -21,15 +21,15 @@ from mcp.server.fastmcp import FastMCP
 
 # -------------------- Configuration --------------------
 N8N_GET_MENU_URL = os.getenv("N8N_GET_MENU_URL", "").strip()
-AUTH_HEADER = os.getenv("N8N_AUTH_HEADER", "").strip()  # e.g., "Authorization"
-AUTH_TOKEN = os.getenv("N8N_AUTH_TOKEN", "").strip()    # e.g., "Bearer xyz"
-REQUEST_TIMEOUT = float(os.getenv("HTTP_TIMEOUT", "15"))  # seconds
+#AUTH_HEADER = os.getenv("N8N_AUTH_HEADER", "").strip()  # e.g., "Authorization"
+#AUTH_TOKEN = os.getenv("N8N_AUTH_TOKEN", "").strip()    # e.g., "Bearer xyz"
+#REQUEST_TIMEOUT = float(os.getenv("HTTP_TIMEOUT", "15"))  # seconds
 
 logging.basicConfig(stream=sys.stderr, level=logging.INFO)
 log = logging.getLogger("mcp-app")
 
 if not N8N_GET_MENU_URL:
-    log.warning("⚠️  N8N_GET_MENU_URL is not set — get_menu will fail until configured.")
+    log.warning("N8N_GET_MENU_URL is not set — get_menu will fail until configured.")
 
 
 # -------------------- Flask Setup --------------------
