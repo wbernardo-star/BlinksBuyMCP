@@ -28,7 +28,7 @@ CORS(
     supports_credentials=False,
     allow_headers=["Content-Type", "Authorization", "X-Requested-With"],
     expose_headers=["Content-Type"],
-    methods=["GET", "POST", "OPTIONS"],
+    methods=["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
 )
 
 @app.get("/health")
