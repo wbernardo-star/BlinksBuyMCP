@@ -10,11 +10,13 @@ import os
 import threading
 from flask import Flask, jsonify
 from mcp.server.fastmcp import FastMCP
+from flask_cors import CORS
 
 # ------------------------------------------------------------
 # Flask Setup
 # ------------------------------------------------------------
 app = Flask(__name__)
+CORS (app)
 
 @app.route("/health")
 def health():
