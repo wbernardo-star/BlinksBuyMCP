@@ -49,7 +49,7 @@ def run_mcp_server():
     This allows AI assistants or local LLM clients to connect via MCP.
     """
     print("Starting MCP server (stdio transport)...")
-    mcp.run_stdio()
+    mcp.run()
 
 
 # ------------------------------------------------------------
